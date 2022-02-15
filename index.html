@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors, Lizard, Spock!</h1>
+    <div class="container">
+        <div class="topbox">
+            <div class="buttonsbox">
+                <div class="buttonbkgd" id="rock">
+                    <img src="./images/rock.png" alt="rock" />
+                </div>
+                <div class="buttonbkgd" id="paper">
+                    <img src="./images/paper.png" alt="paper" />
+                </div>
+                <div class="buttonbkgd" id="scissors">
+                    <img src="./images/scissors.png" alt="scissors" />
+                </div>  
+                <div class="buttonbkgd" id="lizard">
+                    <img src="./images/lizard.png" alt="lizard" />
+                </div>  
+                <div class="buttonbkgd" id="spock">
+                    <img src="./images/spock.png" alt="spock" />
+                </div>  
+            </div>
+        </div>
+        <p class="message">First to five wins. Make your selection!</p>
+        <div class="bottombox">
+            <div class="playerbox">
+                <p class="name">Player</p>
+                <div class="buttonbkgd" id="playericon">
+                </div>
+            </div>
+            <div class="scorebox">
+                <p class="name">Score</p>
+                <div class="score">
+                    <span id="playerscore">0</span>:<span id="computerscore">0</span>
+                </div>
+            </div>
+            <div class="computerbox">
+                <p class="name">Computer</p>
+                <div class="buttonbkgd" id="computericon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="modal">
+            <div class="endgame-message"></div>
+            <div class="resetbutton">
+                <p class="resetbuttontext">Play Again</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
