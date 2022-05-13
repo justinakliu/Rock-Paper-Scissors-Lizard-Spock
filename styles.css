@@ -6,68 +6,41 @@ body {
 }
 
 h1 {
-    font-size: 60px;
-}
-
-h2 {
     font-size: 40px;
 }
 
-.container {
+.maincontainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .topbox {
     margin: 20px;
     display: flex;
-    flex-direction: column;
     border: 6px solid black;
     border-radius: 20px;
-    padding: 10px;
 }
 
-.bottombox {
+.bottomcontainer {
     display: flex;
     flex-direction:row;
 }
 
 .playerbox,
-.computerbox {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    border: 6px solid black;
-    border-radius: 20px;
-    height: 200px;
-    padding: 10px;
-}
+.computerbox,
 .scorebox {
     margin: 20px;
     display: flex;
     flex-direction: column;
     border: 6px solid black;
     border-radius: 20px;
-    height: 200px;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 
 }
 
-.bottombox .computerbox {
-    flex: 1 1 0%;
-}
-
-
-.bottombox .scorebox {
-    flex-grow: 1;
-}
-
-.buttonsbox {
+.buttonscontainer {
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -78,8 +51,8 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: #dcddf1;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin: 15px;
     border-radius: 5px;
 }
@@ -90,18 +63,13 @@ h2 {
 }
 
 .name {
-    font-size: 30px;
     padding: 0;
     margin: 0;
 }
 
 
 img {
-    max-width: 100px;
-}
-
-header {
-    font-size: 50px;
+    max-width: 80px;
 }
 
 .score {
@@ -110,8 +78,10 @@ header {
 }
 
 .endgame-message,
-.message {
-    font-size: 30px;
+.message,
+.resetbuttontext,
+.name {
+    font-size: 24px;
 }
 
 .highlight {
@@ -161,10 +131,6 @@ header {
     background-color: #cee8b6;
 }
 
-
-.resetbuttontext {
-    font-size: 30px;
-}
 
 
 
