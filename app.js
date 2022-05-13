@@ -1,10 +1,10 @@
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const dictDefeats = {
-    'rock': ['lizard','scissors'],
-    'paper': ['rock', 'spock'],
-    'scissors': ['paper','lizard'],
-    'lizard': ['paper', 'spock'],
-    'spock': ['scissors', 'rock']
+    'rock': new Set(['lizard','scissors']),
+    'paper': new Set(['rock', 'spock']),
+    'scissors': new Set(['paper','lizard']),
+    'lizard': new Set(['paper', 'spock']),
+    'spock': new Set(['scissors', 'rock'])
 }
 
 const dictMessages = {
@@ -75,14 +75,14 @@ function play(playerSelection) {
     playerIcon_div.innerHTML = document.getElementById(playerSelection).innerHTML;
     computerIcon_div.classList.remove("highlight")
     playerIcon_div.classList.remove("highlight")
-    if (playerSelection == computerSelection) {
+    if (playerSelection === computerSelection) {
         message_div.textContent = "It's a draw! Everyone gets a point.";
         playerScore++
         computerScore++
         playerIcon_div.classList.add("highlight")
         computerIcon_div.classList.add("highlight")
     } 
-    else if (dictDefeats[playerSelection].includes(computerSelection)){
+    else if (dictDefeats[playerSelection].has(computerSelection)){
         let messageKey = playerSelection + '-' + computerSelection 
         message_div.textContent = dictMessages[messageKey];
         playerScore++
@@ -97,17 +97,17 @@ function play(playerSelection) {
     playerScore_span.innerHTML = playerScore
     computerScore_span.innerHTML = computerScore
 
-    if (playerScore == 5 && computerScore == 5) {
+    if (playerScore === 5 && computerScore === 5) {
         endMessage_div.textContent = "Game over. It's a tie!";
     }
-    else if (playerScore == 5) {
+    else if (playerScore === 5) {
         endMessage_div.textContent = "Game over. You won!";
     }
-    else if (computerScore == 5) {
+    else if (computerScore === 5) {
         endMessage_div.textContent = "Game over. Computer won!"
     }
 
-    if (playerScore == 5 || computerScore == 5) {
+    if (playerScore === 5 || computerScore === 5) {
         display_overlay();
         setTimeout(display_modal, 2000)
     }
